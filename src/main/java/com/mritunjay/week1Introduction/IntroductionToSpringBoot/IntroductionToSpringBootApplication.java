@@ -13,15 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
 	@Autowired
-	Apple obj;  // First Apple instance
-
-	@Autowired
-	Apple obj2;  // Second Apple instance
-
-	@Autowired //Field Dependency Injection
-	DBService dbService;  // Injecting the appropriate database service
-
-	@Autowired
 	CakeBaker cakeBaker;
 	/**
 	 * Main method to start the Spring Boot application.
@@ -34,23 +25,13 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
 	/**
 	 * Runs after the application startup.
-	 * It demonstrates dependency injection and prints data from `DBService`.
+	 * It demonstrates dependency injection and run method bakeCake from CakeBaker`.
 	 *
 	 * @param args Command-line arguments.
 	 * @throws Exception if an error occurs.
 	 */
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatApple();
-		obj2.eatApple();
-
-		// Printing hashcodes to verify that different instances are created
-		System.out.println("HashCode of obj: " + obj.hashCode());
-		System.out.println("HashCode of obj2: " + obj2.hashCode());
-
-		// Fetching data from the active database configuration
-		System.out.println("Database Output: " + dbService.getData());
-
 		System.out.println("cake: " + cakeBaker.bakeCake("Strw"));
 	}
 }

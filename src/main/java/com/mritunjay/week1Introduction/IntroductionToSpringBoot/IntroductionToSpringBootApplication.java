@@ -32,6 +32,6 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	 */
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("cake: " + cakeBaker.bakeCake("Strw"));
+		System.out.println("cake: " + cakeBaker.bakeCake("Chocolate"));
 	}
 }

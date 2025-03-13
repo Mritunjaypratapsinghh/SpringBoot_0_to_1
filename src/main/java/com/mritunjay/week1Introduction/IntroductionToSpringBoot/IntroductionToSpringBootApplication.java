@@ -21,6 +21,8 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	@Autowired //Field Dependency Injection
 	DBService dbService;  // Injecting the appropriate database service
 
+	@Autowired
+	CakeBaker cakeBaker;
 	/**
 	 * Main method to start the Spring Boot application.
 	 *
@@ -48,5 +50,7 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
 		// Fetching data from the active database configuration
 		System.out.println("Database Output: " + dbService.getData());
+
+		System.out.println("cake: " + cakeBaker.bakeCake("Strw"));
 	}
 }

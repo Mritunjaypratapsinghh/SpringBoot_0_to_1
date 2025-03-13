@@ -11,8 +11,8 @@ public class AppConfig {
     // @Scope("singleton") // Default scope: a single instance shared across the application
     // @Scope("request")   // Creates a new instance per HTTP request (useful in web apps)
     // @Scope("websocket") // Creates a new instance per WebSocket session
-    @Scope("prototype")  // Creates a new instance every time it is requested
-    Apple getApple() {
+//    @Scope("prototype")  // Creates a new instance every time it is requested
+    public Apple getApple() {
         return new Apple();
     }
 }
